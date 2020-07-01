@@ -305,8 +305,8 @@ g:agit_max_log_lines				*g:agit_max_log_lines*
 	default value: 500
 	
 g:agit_max_author_name_width			*g:agit_max_author_name_width*
-	If it is non-zero, the commit author names in |agit-log| buffer are
-	truncated to the value.
+	If it is greater than 0, the commit author names in |agit-log| buffer are
+	truncated to the value. If it is -1 the author name is not shown.
 	default value: 0
 
 g:agit_skip_empty_line				*g:agit_skip_empty_line*

@@ -38,7 +38,11 @@ function! s:git.relpath() abort
 endfunction
 
 function! s:get_author_name_format()
-  return '{>' . (g:agit_max_author_name_width > 0 ? '%<(' . g:agit_max_author_name_width . ',trunc)' : '') . '%an<}'
+  if g:agit_max_author_name_width == -1
+    return ''
+  else
+    return '{>' . (g:agit_max_author_name_width > 0 ? '%<(' . g:agit_max_author_name_width . ',trunc)' : '') . '%an<}'
+  endif
 endfunction
 
 function! s:git.log(winwidth) dict
